@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="#303030"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Version 1.0"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Space
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="187dp"
+                    android:layout_height="87dp"
+                    android:paddingRight="0dp"
+                    android:src="@drawable/appettea" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/orgname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:text="Today July 13 2021"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/menu"
+            android:layout_below="@+id/details"
+            android:layout_height="wrap_content"
+
+            android:text="Menu"
+            android:drawableStart="@drawable/menu"/>
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/stock"
+            android:layout_below="@+id/menu"
+            android:layout_height="wrap_content"
+            android:text="Stock"
+            android:drawableStart="@drawable/stock"/>
+
+        <Button
+            android:id="@+id/sales"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stock"
+            android:drawableStart="@drawable/sales"
+            android:text="SALES" />
+
+        <Button
+
+            android:id="@+id/changepassword"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="CHANGE PASSWORD"
+            android:textColor="#ffffff"
+            android:background="@color/cardview_dark_background"
+            android:layout_alignParentBottom="true"
+            android:layout_height="40dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

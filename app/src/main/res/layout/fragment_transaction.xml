@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Transactions">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TRANSACTIONS"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+                    <TableRow
+
+                        android:id="@+id/firstRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- first element of the row-->
+
+
+                        <TextView
+                            android:id="@+id/simpleTextView1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+
+                            android:padding="18dip"
+                            android:text="code"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="name"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="phone"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="date"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+                        <TextView
+
+                            android:id="@+id/simpleTextView4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="time"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+                        <TextView
+
+                            android:id="@+id/simpleTextView5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="amount"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+
+                    </TableRow>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/tbl_checkout"
+                            android:layout_height="wrap_content">
+
+
+
+
+                        </TableLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="HISTORY"
+                android:textColor="#fff" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category">
+
+                <LinearLayout
+                    android:id="@+id/host_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Back"
+                        android:textColor="#00ff00" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

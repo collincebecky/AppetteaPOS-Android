@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Today"
+                    android:textSize="10sp"
+                    android:paddingBottom="40dp"
+                    android:textColor="#FFF"
+                    android:gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/orders"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0 Orders"
+                        android:textSize="45sp"
+                        android:textColor="#fff"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/revenue"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:textColor="#fff"
+                        android:text="Revenue \n Ksh 0"
+                        android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CHECKOUTS"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+
+                        android:id="@+id/firstRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- first element of the row-->
+                        <TextView
+
+                            android:id="@+id/simpleTextView1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+
+                            android:padding="18dip"
+                            android:text="Date"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="Items"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="Time"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="Cash"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <TextView
+
+                            android:id="@+id/simpleTextView4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:padding="18dip"
+                            android:text="Mode"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/tbl_checkout"
+                            android:layout_height="wrap_content">
+
+
+
+                        </TableLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="HISTORY"
+                android:textColor="#fff" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category">
+
+                <LinearLayout
+                    android:id="@+id/host_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/checkout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="checkouts"
+                        android:textColor="#00ff00" />
+
+                    <Button
+                        android:id="@+id/transaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="transactions"
+                        android:textColor="#00ff00" />
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

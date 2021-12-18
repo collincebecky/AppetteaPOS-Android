@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/darkBlue"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:text="Version 1.0"
+        android:textSize="10sp"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="match_parent" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="187dp"
+            android:layout_height="85dp"
+            android:paddingRight="0dp"
+            android:src="@drawable/appettea" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/orgname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:text="Today July 13 2021"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:text=""
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/fragment"
+        android:layout_height="wrap_content"
+        android:text="1000"/>
+
+</LinearLayout>
