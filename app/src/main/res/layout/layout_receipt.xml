@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.9"
+            android:paddingBottom="20dp"
+            android:layout_height="wrap_content">
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/print"
+
+                android:background="#DCDCDC">
+
+                <ir.beigirad.zigzagview.ZigzagView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="150dp"
+                    app:zigzagBackgroundColor="#fff"
+                    app:zigzagElevation="6dp"
+                    app:zigzagHeight="6dp"
+                    app:zigzagPaddingContent="16dp"
+                    app:zigzagShadowAlpha="0.1"
+                    app:zigzagSides="top|bottom|right|left">
+
+                    <TextView
+                        android:id="@+id/receipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+
+                        android:background="@drawable/zigzag"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:text="hello"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic" />
+
+                </ir.beigirad.zigzagview.ZigzagView>
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/print"
+            android:layout_width="match_parent"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/beautifull_button_background_green"
+            android:text="PRINT" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
