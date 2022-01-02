@@ -76,20 +76,20 @@
 
 
         <Button
-            android:layout_width="match_parent"
             android:id="@+id/menu"
-            android:layout_below="@+id/details"
-            android:layout_height="wrap_content"
-
-            android:text="Menu"
-            android:drawableStart="@drawable/menu"/>
-        <Button
             android:layout_width="match_parent"
-            android:id="@+id/stock"
-            android:layout_below="@+id/menu"
             android:layout_height="wrap_content"
-            android:text="Stock"
-            android:drawableStart="@drawable/stock"/>
+            android:layout_below="@+id/details"
+            android:drawableStart="@drawable/menu"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menu"
+            android:drawableStart="@drawable/stock"
+            android:text="Stock" />
 
         <Button
             android:id="@+id/sales"
