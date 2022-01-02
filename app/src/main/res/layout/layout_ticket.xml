@@ -68,7 +68,7 @@
                 android:id="@+id/ticket"
                 android:background="@drawable/button_background"
                 android:textColor="@color/black"
-                android:text="PRINT"
+                android:text="Receipt"
                 android:layout_height="match_parent"/>
 
         </LinearLayout>
