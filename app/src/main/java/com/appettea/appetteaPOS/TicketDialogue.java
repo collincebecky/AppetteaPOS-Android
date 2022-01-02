@@ -66,7 +66,7 @@ public class TicketDialogue extends AppCompatDialogFragment  {
     public TicketDialogue(Context applicationContext, String phone, HashMap<String,Integer> monitor,
                           HashMap<String, Vector<Object>> storeItemInfo) {
 
-        context=applicationContext;
+        this.context=applicationContext;
 
         this.monitor=monitor;
 
@@ -74,7 +74,7 @@ public class TicketDialogue extends AppCompatDialogFragment  {
 
         this.phone = phone;
 
-        receipt = new Receipt(getContext(),monitor,storeItemInfo);
+       // receipt = new Receipt(getContext(),monitor,storeItemInfo);
 
 
 
@@ -107,10 +107,7 @@ public class TicketDialogue extends AppCompatDialogFragment  {
             @Override
             public void onClick(View view) {
 
-
                 dismiss();
-
-
 
             }
         });
@@ -119,8 +116,13 @@ public class TicketDialogue extends AppCompatDialogFragment  {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(getContext(), "No printer attached yet", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getContext(), "No printer attached yet", Toast.LENGTH_SHORT).show();
                // sendSMS(phone,getMessage());
+
+
+                //->receipt dialog
+
+                showReceipt();
 
 
 
@@ -129,6 +131,15 @@ public class TicketDialogue extends AppCompatDialogFragment  {
 
 
         return dialog;
+    }
+
+    private void showReceipt(){
+
+        Receipt receipt = new Receipt(context,monitor,storeItemInfo);
+
+        receipt.show(getFragmentManager(),"");
+
+
     }
 
     @Override
