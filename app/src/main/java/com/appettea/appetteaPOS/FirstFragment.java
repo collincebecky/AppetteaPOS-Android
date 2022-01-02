@@ -80,6 +80,8 @@ public class FirstFragment extends TemplateFragment{
 
     private CheckOutDialogue checkOutDialogue;
 
+    private boolean isSearch=false;
+
     public FirstFragment() {
         // Required empty public constructor
     }
@@ -168,8 +170,6 @@ public class FirstFragment extends TemplateFragment{
         preview  = view.findViewById(R.id.preview);
 
         setListener(requireContext());
-
-
         //==================================================================
         store = view.findViewById(R.id.store);
 
@@ -209,6 +209,7 @@ public class FirstFragment extends TemplateFragment{
             @Override
             public void onClick(View view) {
                 showPreview();
+                //Toast.makeText(getContext(), "Should show preview", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -241,9 +242,38 @@ public class FirstFragment extends TemplateFragment{
     }
 
 
+    private void cleanMonitor(){
+
+        // remove all 0 value of monitor
+
+        for (String id: monitor.keySet())
+             {
+
+            int value = monitor.get(id);
+
+            if(String.valueOf(value).equals("0")) monitor.remove(id);
+
+        }
+        for( int id = 0; id < monitor.keySet().size(); id++ )
+        {
+            String value =String.valueOf( monitor.get(id));
+            if(value.equals("0"))
+            {
+                monitor.remove(id);
+                id--;
+            }
+        }
+
+
+    }
+
+
     private void showPreview(){
 
         FragmentManager fragmentManager = getFragmentManager();
+
+        //cleanMonitor();
+
         Preview preview = new Preview(getContext(),monitor,storeItemInfo,db);
 
         preview.show(fragmentManager ,"preview");
@@ -260,8 +290,6 @@ public class FirstFragment extends TemplateFragment{
         }, false);
 
 
-
-
     }
 
 
@@ -274,6 +302,7 @@ public class FirstFragment extends TemplateFragment{
         button.setGravity(Gravity.CENTER);
         button.setText(category);
         button.setTextSize(14);
+        button.setBackground(getResources().getDrawable(R.drawable.beautifull_button_background_categories));
         button.setTextColor(Color.WHITE);
         button.setAllCaps(true);
 
@@ -303,12 +332,13 @@ public class FirstFragment extends TemplateFragment{
 
         categoryHost.addView(button);
 
-
     }
 
 
     private void fetchWithCategory(String category ){
 
+
+        isSearch=true;
         Items item = new Items(getContext(),getFragmentManager(),monitor,store,null,db,this);
 
         // Cursor c = db.rawQuery("SELECT * FROM " + DatabaseHelper.ITEMS WH, null);
@@ -332,7 +362,7 @@ public class FirstFragment extends TemplateFragment{
                     store.addView(host);
                     counter=0;
                     host = new LinearLayout(getContext());
-                    continue;
+                   // continue;
 
 
                 }
@@ -364,7 +394,10 @@ public class FirstFragment extends TemplateFragment{
 
                 //LinearLayout _item = item.buildItem(id,description,state, units,instock,sold,_category,price,image,date);
 
-                LinearLayout _item = item.buildMenuItem(id,description,price,image,null);
+
+                String num = isSearch ? String.valueOf(monitor.get(id)) : null;
+
+                LinearLayout _item = item.buildMenuItem(id,description,price,image,num);
 
 
                 host.addView(_item);
@@ -382,7 +415,7 @@ public class FirstFragment extends TemplateFragment{
 
         ArrayList<String> categories = new ArrayList<>();
 
-        monitor.clear();
+        if(!isSearch)monitor.clear();
 
         Items item = new Items(getContext(),getFragmentManager(),monitor,store,db,this);
 
@@ -413,7 +446,7 @@ public class FirstFragment extends TemplateFragment{
                     store.addView(host);
                     counter=0;
                     host = new LinearLayout(getContext());
-                    continue;
+                   // continue;
 
 
                 }
@@ -460,7 +493,9 @@ public class FirstFragment extends TemplateFragment{
 
                 }
 
-                LinearLayout _item = item.buildMenuItem(id,description,price,image,null);
+                String num = isSearch ? String.valueOf(monitor.get(id)) : null;
+
+                LinearLayout _item = item.buildMenuItem(id,description,price,image,num);
 
                 host.addView(_item);
 
