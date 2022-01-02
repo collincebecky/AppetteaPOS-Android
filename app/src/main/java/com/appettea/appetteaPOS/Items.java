@@ -226,7 +226,7 @@ public class Items {
         button1.setTextSize(23);
 
 
-        String amt  = qty == null? "0": qty;
+        String amt  = qty == null || qty == "null" ? "0": qty;
 
         button1.setText(amt);
         button1.setPadding(4, 4, 4, 4);
@@ -257,7 +257,7 @@ public class Items {
                     if(mapItemDiscript != null){
 
 
-                        mapItemDiscript.get(id).first.setText(i +" "+_description);
+                        mapItemDiscript.get(id).first.setText(i +" x "+_description);
 
 
                         int val = monitor.get(id);
@@ -272,13 +272,7 @@ public class Items {
 
                     }
 
-
-
                 }
-
-
-
-                Log.e("TAG","MONITOR -----> "+monitor.toString());
 
             }
         });
@@ -308,7 +302,7 @@ public class Items {
             if(mapItemDiscript != null){
 
 
-                mapItemDiscript.get(id).first.setText(i +" "+_description);
+                mapItemDiscript.get(id).first.setText(i +" x "+_description);
 
 
                 int val = monitor.get(id);
