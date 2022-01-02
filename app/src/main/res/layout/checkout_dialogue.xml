@@ -10,28 +10,35 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:paddingTop="30dp"
+            android:id="@+id/total_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Ksh 00.00"
+            android:textSize="45sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="wrap_content">
 
 
             <TextView
                 android:id="@+id/paybill"
+                android:layout_width="550dp"
+                android:layout_height="105dp"
                 android:layout_weight="1"
-                android:layout_width="match_parent"
+                android:gravity="center"
                 android:text="PAYBILL : 4061531 \n ACCOUNT NO: Moko Hotel"
-                android:gravity="center"
-                android:textSize="25sp"
 
-                android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/total_cost"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:text="Ksh 00.00"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:layout_height="match_parent"/>
+                android:textSize="20sp" />
 
 
         </LinearLayout>
@@ -52,7 +59,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             />
         <LinearLayout
             android:layout_width="match_parent"
